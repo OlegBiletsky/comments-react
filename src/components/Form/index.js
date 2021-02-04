@@ -6,7 +6,7 @@ class Form extends Component  {
         super();
         this.state = {
             name: null,
-            text:null,
+            text: null,
 
             errorName: null,
             errorText: null,
@@ -32,7 +32,7 @@ render() {
                         className='form-name__field'
                         name='form-name__field'
                         type='text'
-                        placeholder="Name"
+                        placeholder="Your name"
                         value={this.state.name}
                         onChange={this.handleChangeNameInput}
                         autoComplete='off'
@@ -44,7 +44,7 @@ render() {
                         className='form-text__field'
                         name='form-text__field'
                         type='text'
-                        placeholder="Comments"
+                        placeholder="Add a comment"
                         value={this.state.text}
                         onChange={this.handleChangeTextInput}
                         autoComplete='off'
@@ -58,7 +58,7 @@ render() {
                     disabled={false }
                 > 
                     <div className='form-submit-btn__text-wrapper'>
-                        <span className='form-submit-btn__text'>Send now</span>
+                        <span className='form-submit-btn__text'>Comment</span>
                     </div>
                 
                 </button>

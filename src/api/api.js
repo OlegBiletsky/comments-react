@@ -1,1 +1,1 @@
-export const getCommentsFetch = (param) => fetch(`https://jordan.ashton.fashion/api/goods/30/comments`);
+export const getCommentsFetch = () => fetch(`https://jordan.ashton.fashion/api/goods/30/comments`);
