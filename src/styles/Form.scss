@@ -1,51 +1,107 @@
 .title{
     color: #191b1e;
     font-family: 'Ubuntu', sans-serif;
-    text-align: center;
     color: #1ea0f2;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .title__first{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 900;
-    margin: 30px 10px 40px 10px;
+    margin: 20px 10px 20px 10px;
 }
 .title__second{
-    font-size: 30px;
+    font-size: 26px;
     font-style: italic;
+    display: flex;
+    align-items: center;
+    p{
+        margin: 5px 10px 5px 5px;
+    }
 }
-.form-name{
 
+.form-name{
+    margin: 20px 0 10px 0;
 }
 .form-name__field{
-    min-width: 300px;
-    color: #657786;    
+    width: 800px;
+    color: #657786;  
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
+    font-size: 20px;
     text-align: left;
-    border-radius: 6px;
-    border: 2px solid #c7cacd;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
     background-color: #ffffff;
-    padding: 8px 15px
+    padding: 8px 15px;
+    @media screen and (max-width: 860px) {
+        width: 700px;
+    }
+    @media screen and (max-width: 760px) {
+        width: 600px;
+    }
+    @media screen and (max-width: 660px) {
+        width: 500px;
+    }
 }
 .form-text{
-
+    margin: 15px 0 5px 0;
 }
 .form-text__field{
-    min-width: 300px;
+    width: 800px;
     color: #657786;     
     font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
+    font-size: 20px;
     text-align: left;
-    border-radius: 6px;
-    border: 2px solid #c7cacd;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
     background-color: #ffffff;
-    padding: 8px 15px
+    padding: 8px 15px;
+    @media screen and (max-width: 860px) {
+        width: 700px;
+    }
+    @media screen and (max-width: 760px) {
+        width: 600px;
+    }
+    @media screen and (max-width: 660px) {
+        width: 500px;
+    }
+}
+
+.form-submit-btn{
+    margin: 8px 0 30px 0;
+}
+.form-submit-btn__text-wrapper{
+    width: 800px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;  
+    background-color:#1ea0f2;
+    @media screen and (max-width: 860px) {
+        width: 700px;
+    }
+    @media screen and (max-width: 760px) {
+        width: 600px;
+    }
+    @media screen and (max-width: 660px) {
+        width: 500px;
+    }
+}
+
+.form-submit-btn__text{
+    color: #ffffff;  
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    background-color:#1ea0f2;
+    padding: 8px 5px;
+}
+.form-submit-btn__icon{
+    color: #ffffff;  
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
 }

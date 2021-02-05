@@ -1,24 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
-import { getCommentsFunc} from '../actions/comments';
-import Comments from '../components/Comments';
+import { getPageComments } from '../actions/comments';
+import CommentsList from '../components/Comments';
+import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector} from '../selectors/comments'
 
-const CommentsContainer = ( { comments } ) => (
-    <Comments 
+const CommentsContainer = ( { comments, getComments, pages, lastPage } ) => {
+    
+    useEffect(()=>{getComments(1)}, []);
+    return (<CommentsList
         comments={comments} 
-    />
-);
+        
+    />)
+};
 
 
 const mapStateToProps = (state) => ({
-    comments: state.commentsReducer.comments.database,
+    comments: getCommentsSelector(state),
+    pages: getPagesSelector(state),
+    lastPage: getLastPageSelector(state),
 
 });
 
 
-const mapDispatchToProps = (dispatch, param) => {
+const mapDispatchToProps = (dispatch) => {
     return{
-        getPosts: getCommentsFunc(dispatch, param),
+        getComments: getPageComments(dispatch),
     };
 };
 

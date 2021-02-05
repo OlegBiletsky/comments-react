@@ -1,12 +1,16 @@
 import React from 'react';
 import '../../styles/Form.scss';
-
+import {BsBrightnessHighFill} from 'react-icons/bs';
+import {BiCommentAdd} from 'react-icons/bi';
 function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, }) {
     return (
         <>
             <h1 className="title">
-                <p className="title__first">Please leave a comment.</p> 
-                <p className="title__second">Your feedback is appreciated.</p>
+                <div className="title__first">Please leave a comment</div> 
+                <div className="title__second">
+                    <p>Your feedback is appreciated</p>
+                    <BsBrightnessHighFill className='title__icon'/>
+                </div>
             </h1>
 
             <form className="form"  noValidate onSubmit={ (e)=>(e.preventDefault()) }>
@@ -46,7 +50,8 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                     disabled={false }
                 > 
                     <div className='form-submit-btn__text-wrapper'>
-                        <span className='form-submit-btn__text'>Comment</span>
+                        <div className='form-submit-btn__text'>Comment</div>
+                        <BiCommentAdd className='form-submit-btn__icon'/>
                     </div>
                 </button> 
 

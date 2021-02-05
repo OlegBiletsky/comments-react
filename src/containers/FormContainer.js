@@ -15,8 +15,8 @@ const FormContainer = ( { inputNameValue, inputTextValue, changeInputName, chang
 
 
 const mapStateToProps = (state) => ({
-    inputNameValue: state.formReducer.inputNameValue,
-    inputTextValue: state.formReducer.inputTextValue,
+    inputNameValue: state.form.inputNameValue,
+    inputTextValue: state.form.inputTextValue,
 });
 
 

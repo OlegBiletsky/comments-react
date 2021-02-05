@@ -1,9 +1,12 @@
 import {
-    GET_COMMENTS_REQUEST,
-    GET_COMMENTS_SUCCESS,
+    GET_MORE_COMMENTS_REQUEST,
+    GET_MORE_COMMENTS_SUCCESS,
     GET_COMMENTS_FAIL,
+    GET_PAGE_COMMENTS_REQUEST,
+    GET_PAGE_COMMENTS_SUCCESS,
     
 } from '../constants/actionTypes';
+
 
 const initialState = {
     comments: {
@@ -11,28 +14,51 @@ const initialState = {
         error: null,
         database: [],
     },
+    pages: [],
+    lastPage: null,
 };
 
-const blogReducer = (state = initialState, action) => {
+const commentsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case GET_COMMENTS_REQUEST:
+        case GET_MORE_COMMENTS_REQUEST:
             return {
                 ...state,
                 comments: {
                     isLoading: true,
                     error: null,
-                    database: []
                 },
             };
-        case GET_COMMENTS_SUCCESS:
+        case GET_PAGE_COMMENTS_REQUEST:
+            return {
+                ...state,
+                comments: {
+                    isLoading: true,
+                    error: null,
+                },
+        };
+        case GET_MORE_COMMENTS_SUCCESS:
             return {
                 ...state,
                 comments: {
                     isLoading: false,
                     error: false,
-                    database: action.payload,
+                    database: [...state.comments.database, action.payload.data]
                 },
+                pages: [...state.pages, action.payload.current_page],
+                lastPage: action.payload.last_page,
             };
+        case GET_PAGE_COMMENTS_SUCCESS:
+            return {
+                ...state,
+                comments: {
+                    isLoading: false,
+                    error: false,
+                    database: action.payload.data,
+                },
+                pages: [action.payload.current_page],
+                lastPage: action.payload.last_page,
+            };
+
         case GET_COMMENTS_FAIL:
             return {
                 ...state,
@@ -46,4 +72,4 @@ const blogReducer = (state = initialState, action) => {
             return state;
     }
 };
-export default blogReducer;
+export default commentsReducer;

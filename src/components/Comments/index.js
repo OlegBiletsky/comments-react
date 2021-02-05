@@ -1,12 +1,19 @@
 import React from 'react';
 import '../../styles/Comments.scss';
 
-function Comments ({ getComments  }) {
+function CommentsList ({ comments=[] }) {
     return (
         <>
             <h1 className="title">
                 Title for comments
             </h1>
+            {comments.map((item) => {
+                return (
+                    <li key={item.id}>
+                        <b>{item.name}</b> : {item.text}
+                    </li>
+                )
+            })}
 
 
 
@@ -15,4 +22,4 @@ function Comments ({ getComments  }) {
         </>
     );
 };
-export default Comments;
+export default CommentsList;

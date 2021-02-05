@@ -4,7 +4,7 @@ import formReducer from './formReducer';
 
 
 export default combineReducers({
-    commentsReducer:commentsReducer,
-    formReducer: formReducer,
+    comments:commentsReducer,
+    form: formReducer,
 
 })
