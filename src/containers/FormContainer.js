@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeInputNameAction, changeInputTextAction} from '../actions/form';
+import { changeInputNameAction, changeInputTextAction } from '../actions/form';
 import Form from '../components/Form';
 
 const FormContainer = ( { inputNameValue, inputTextValue, changeInputName, changeInputText } ) => (
@@ -20,7 +20,7 @@ const mapStateToProps = (state) => ({
 });
 
 
-const mapDispatchToProps = (dispatch, param) => {
+const mapDispatchToProps = (dispatch) => {
     return{
         
         changeInputName: (inputValue) => dispatch( changeInputNameAction(inputValue) ),

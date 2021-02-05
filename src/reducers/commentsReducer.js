@@ -14,7 +14,7 @@ const initialState = {
         error: null,
         database: [],
     },
-    pages: [],
+    pages: [1],
     lastPage: null,
 };
 
@@ -24,6 +24,7 @@ const commentsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 comments: {
+                    ...state.comments,
                     isLoading: true,
                     error: null,
                 },
@@ -32,6 +33,7 @@ const commentsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 comments: {
+                    ...state.comments,
                     isLoading: true,
                     error: null,
                 },
@@ -42,7 +44,7 @@ const commentsReducer = (state = initialState, action) => {
                 comments: {
                     isLoading: false,
                     error: false,
-                    database: [...state.comments.database, action.payload.data]
+                    database: [...state.comments.database, ...action.payload.data]
                 },
                 pages: [...state.pages, action.payload.current_page],
                 lastPage: action.payload.last_page,
