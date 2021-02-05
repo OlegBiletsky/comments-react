@@ -1,17 +1,25 @@
 .title{
     color: #191b1e;
-    font-family: "Arial MT";
-    font-size: 25px;
-    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
     text-align: center;
+    color: #1ea0f2;
+}
+.title__first{
+    font-size: 30px;
+    font-weight: 900;
+    margin: 30px 10px 40px 10px;
+}
+.title__second{
+    font-size: 30px;
+    font-style: italic;
 }
 .form-name{
 
 }
 .form-name__field{
     min-width: 300px;
-    color: #657786;
-    font-family: "Arial MT";
+    color: #657786;    
+    font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     font-weight: 400;
     font-style: normal;
@@ -28,8 +36,8 @@
 }
 .form-text__field{
     min-width: 300px;
-    color: #657786;
-    font-family: "Arial MT";
+    color: #657786;     
+    font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     font-weight: 400;
     font-style: normal;

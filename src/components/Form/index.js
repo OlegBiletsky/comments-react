@@ -5,7 +5,8 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
     return (
         <>
             <h1 className="title">
-                Please leave a comment. Your feedback is appreciated.
+                <p className="title__first">Please leave a comment.</p> 
+                <p className="title__second">Your feedback is appreciated.</p>
             </h1>
 
             <form className="form"  noValidate onSubmit={ (e)=>(e.preventDefault()) }>
