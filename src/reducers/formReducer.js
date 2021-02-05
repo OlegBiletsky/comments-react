@@ -5,8 +5,11 @@ import {
 } from '../constants/actionTypes';
 
 const initialState = {
+    value: {
         inputNameValue: '',
-        inputTextValue: '',  
+        inputTextValue: '', 
+    }
+         
     
 
 };

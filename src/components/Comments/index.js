@@ -8,12 +8,6 @@ function Comments ({ getComments  }) {
                 Title for comments
             </h1>
 
-            <button 
-                onClick={ (e)=>{return ( e.preventDefault(), getComments() ) }} 
-                type='submit' 
-            >
-                Show comments
-            </button>
 
 
 
