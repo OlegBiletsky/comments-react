@@ -1,13 +1,13 @@
 import '../styles/App.scss';
-import Form from '../components/Form'
-import Comments from '../components/Comments';
+import FormContainer from '../containers/FormContainer'
+import CommentsContainer from '../containers/CommentsContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Form/>
-        <Comments/>
+        <FormContainer/>
+        <CommentsContainer/>
       </header>
     </div>
   );

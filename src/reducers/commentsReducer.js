@@ -3,7 +3,7 @@ import {
     GET_COMMENTS_SUCCESS,
     GET_COMMENTS_FAIL,
     
-} from '../constants/constants';
+} from '../constants/actionTypes';
 
 const initialState = {
     comments: {

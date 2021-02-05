@@ -5,7 +5,8 @@ import {
     GET_MORE_COMMENTS_REQUEST,
     GET_MORE_COMMENTS_SUCCESS,
     GET_MORE_COMMENTS_FAIL,
-} from '../constants/constants';
+} from '../constants/actionTypes';
+
 import { getCommentsFetch } from '../api/api';
 
 const getComments = async (dispatch) => {

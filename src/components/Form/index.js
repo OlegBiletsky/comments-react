@@ -1,71 +1,54 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../styles/Form.scss';
 
-class Form extends Component  {
-    constructor() {
-        super();
-        this.state = {
-            name: null,
-            text: null,
+function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, }) {
 
-            errorName: null,
-            errorText: null,
-
-            LOADER: false,
-            SUCCESS : false,
-        };
-
-// bind function
-
-    };
-render() {
     return (
         <>
             <h1 className="title">
                 Please leave a comment. Your feedback is appreciated.
             </h1>
 
-            <form className="form"  noValidate>
+            <form className="form"  noValidate onSubmit={ (e)=>(e.preventDefault()) }>
 
                 <div className="form-name">
                     <input
+                        value={inputNameValue}
+                        onChange={ (e)=>handleChangeNameInput(e.target.value)}
+                        placeholder="Your name"
                         className='form-name__field'
                         name='form-name__field'
                         type='text'
-                        placeholder="Your name"
-                        value={this.state.name}
-                        onChange={this.handleChangeNameInput}
                         autoComplete='off'
                     />
                 </div>
 
                 <div className="form-text">
                     <textarea
+                        value={inputTextValue}
+                        onChange={ (e)=>handleChangeTextInput(e.target.value)}
+                        placeholder="Add a comment"
                         className='form-text__field'
                         name='form-text__field'
                         type='text'
-                        placeholder="Add a comment"
-                        value={this.state.text}
-                        onChange={this.handleChangeTextInput}
                         autoComplete='off'
                     />  
                 </div>
 
-                <button 
+                {/* <button 
                     className='form-submit-btn' 
                     type='submit' 
-                    onClick={this.handleSubmitForm} 
+                    onClick={ (e)=>{return (e.preventDefault(), handleSubmitForm(value)) }} 
                     disabled={false }
                 > 
                     <div className='form-submit-btn__text-wrapper'>
                         <span className='form-submit-btn__text'>Comment</span>
                     </div>
-                
-                </button>
+                </button> */}
+
             </form>
 
         </>
     );
-};
 };
 export default Form;
