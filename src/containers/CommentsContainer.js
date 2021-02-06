@@ -43,7 +43,6 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                     nextLabel={'Next >'}
                     onPageChange={(e)=>{ getComments(e.selected+1); }}
                     initialPage = {currentPage-1}
-
                 />
             </div>
             
