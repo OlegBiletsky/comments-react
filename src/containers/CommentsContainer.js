@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { getPageComments, getMoreComments } from '../actions/comments';
 import CommentsList from '../components/CommentsList';
 import MoreComments from '../components/MoreComments';
-import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector} from '../selectors/comments';
+import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector, getSeparateCurrentPageSelector} from '../selectors/comments';
 import ReactPaginate from 'react-paginate';
 import '../styles/Paginate.scss';
 
-const CommentsContainer = ( { comments, getComments, getMoreComments, pages, lastPage, currentPage } ) => {
+const CommentsContainer = ( { comments, getComments, getMoreComments, pages, lastPage, currentPage, separateCurrentPage } ) => {
     
     useEffect(()=>{getComments(currentPage)}, []);
     return (
@@ -57,7 +57,8 @@ const mapStateToProps = (state) => ({
     comments: getCommentsSelector(state),
     pages: getPagesSelector(state),
     lastPage: getLastPageSelector(state),
-    currentPage: getCurrentPageSelector(state)
+    currentPage: getCurrentPageSelector(state),
+    separateCurrentPage: getSeparateCurrentPageSelector(state),
 
 });
 

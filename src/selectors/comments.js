@@ -5,4 +5,5 @@ export const getCurrentPageSelector = (state) => {
     const pages = getPagesSelector(state)
     return pages[pages.length - 1] 
 };
+export const getSeparateCurrentPageSelector = (state) =>state.comments.separateCurrentPage;
 

@@ -14,6 +14,7 @@ const initialState = {
         error: null,
         database: [],
     },
+    separateCurrentPage: 1,
     pages: [1],
     lastPage: null,
 };
@@ -46,6 +47,7 @@ const commentsReducer = (state = initialState, action) => {
                     error: false,
                     database: [...state.comments.database, ...action.payload.data]
                 },
+                separateCurrentPage: action.payload.current_page,
                 pages: [...state.pages, action.payload.current_page],
                 lastPage: action.payload.last_page,
             };
@@ -57,6 +59,7 @@ const commentsReducer = (state = initialState, action) => {
                     error: false,
                     database: action.payload.data,
                 },
+                separateCurrentPage: action.payload.current_page,
                 pages: [action.payload.current_page],
                 lastPage: action.payload.last_page,
             };
