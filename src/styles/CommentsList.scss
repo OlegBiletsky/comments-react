@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './colors.scss';
 .comment-wrapper{
     width: 800px;
     margin: auto;
@@ -26,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 6px;
-    border: 1px solid #74c4f7;
+    // border: 1px solid #74c4f7;
     background-color: #d5ebf8;
 }
 .comment-user{
@@ -117,7 +118,6 @@
 
 
 .comment-text{
-    background-color: rgb(211, 210, 210);
     background-color: #d5ebf8;
     width: 75%;
     height: $commentHeight;
