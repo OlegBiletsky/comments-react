@@ -1,0 +1,148 @@
+@import './variables.scss';
+@import './colors.scss';
+.title {
+    color: #1ea0f2;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title__first {
+    font-size: 35px;
+    font-weight: 900;
+    margin: 20px 10px 20px 10px;
+    @media screen and (max-width: $breakpoint4) {
+        font-size: 30px;
+        margin: 15px 10px 15px 10px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        font-size: 22px;
+        margin: 15px 10px 10px 10px;
+    }
+}
+.title__second {
+    font-size: 26px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    p {
+        margin: 5px 10px 5px 5px;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        font-size: 24px;
+        p {
+            margin: 5px 8px 5px 5px;
+        }
+    }
+    @media screen and (max-width: $breakpoint5) {
+        font-size: 20px;
+        p {
+            margin: 5px 8px 5px 5px;
+        }
+    }
+}
+
+.form-name {
+    margin: 20px 0 10px 0;
+}
+.form-name__field {
+    width: 800px;
+    color: #657786;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    @media screen and (max-width: $breakpoint1) {
+        width: 700px;
+    }
+    @media screen and (max-width: $breakpoint2) {
+        width: 600px;
+    }
+    @media screen and (max-width: $breakpoint3) {
+        width: 500px;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        width: 400px;
+        font-size: 16px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: 300px;
+    }
+}
+
+.form-text {
+    margin: 15px 0 5px 0;
+}
+.form-text__field {
+    resize: none;
+    width: 800px;
+    color: #657786;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
+    background-color: #ffffff;
+    padding: 8px 15px;
+    @media screen and (max-width: $breakpoint1) {
+        width: 700px;
+    }
+    @media screen and (max-width: $breakpoint2) {
+        width: 600px;
+    }
+    @media screen and (max-width: $breakpoint3) {
+        width: 500px;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        width: 400px;
+        font-size: 16px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: 300px;
+    }
+}
+
+.form-submit-btn {
+    margin: 8px 0 30px 0;
+}
+.form-submit-btn__text-wrapper {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
+    background-color: #1ea0f2;
+    @media screen and (max-width: $breakpoint1) {
+        width: $widthForBreakpoint1;
+    }
+    @media screen and (max-width: $breakpoint2) {
+        width: $widthForBreakpoint2;
+    }
+    @media screen and (max-width: $breakpoint3) {
+        width: $widthForBreakpoint3;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+    }
+    &:hover{
+        border: 1px solid #1585ca;
+    }
+}
+
+.form-submit-btn__text {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+    background-color: #1ea0f2;
+    padding: 8px 10px;
+}
+.form-submit-btn__icon {
+    color: #ffffff;
+    font-size: 22px;
+}

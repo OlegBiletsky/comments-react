@@ -1,0 +1,53 @@
+@import './variables.scss';
+@import './colors.scss';
+.more-btn-wrapper{
+    margin: auto;
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.more-btn{
+    margin: 20px 0 20px 0;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #1ea0f2;
+    background-color: #1ea0f2;
+    @media screen and (max-width: $breakpoint1) {
+        width: $widthForBreakpoint1;
+    }
+    @media screen and (max-width: $breakpoint2) {
+        width: $widthForBreakpoint2;
+    }
+    @media screen and (max-width: $breakpoint3) {
+        width: $widthForBreakpoint3;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+    }
+    &:hover{
+        border: 1px solid #1585ca;
+    }
+}
+.more-btn-inner-wrapper{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.more-btn__text {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+    background-color: #1ea0f2;
+    padding: 8px 10px;
+}
+.more-btn__icon {
+    color: #ffffff;
+    font-size: 26px;
+}
