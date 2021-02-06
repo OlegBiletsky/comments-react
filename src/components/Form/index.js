@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/Form.scss';
 import {BsBrightnessHighFill, BsPlusCircleFill } from 'react-icons/bs';
 
-function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, }) {
+function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, handleSubmitForm}) {
     return (
         <>
             <h1 className="title">
@@ -46,7 +46,7 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                 <button 
                     className='form-submit-btn' 
                     type='submit' 
-                    onClick={ (e)=>{return (e.preventDefault()   ) }} 
+                    onClick={ (e)=>{return (e.preventDefault(), handleSubmitForm(e)    ) }} 
                     disabled={false }
                 > 
                     <div className='form-submit-btn__text-wrapper'>
