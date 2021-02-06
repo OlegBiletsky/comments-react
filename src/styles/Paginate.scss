@@ -33,6 +33,7 @@
 .pageLinkClassName{
     padding: 10px 20px 10px 20px;
     background-color: #d5ebf8;
+    border-radius: 4px;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
         width: $widthForBreakpoint4;
@@ -49,6 +50,7 @@
 }
 .previousLinkClassName{
     padding: 10px 20px 10px 20px;
+    border-radius: 4px;
     background-color: #88a2bb;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
@@ -61,7 +63,8 @@
     }
 }
 .nextLinkClassName{
-    padding: 10px 20px 10px 20px;   
+    padding: 10px 20px 10px 20px; 
+    border-radius: 4px;
     background-color: #88a2bb;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
