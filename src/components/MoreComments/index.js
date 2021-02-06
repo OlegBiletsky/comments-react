@@ -13,7 +13,7 @@ const MoreComments = ( { getMoreComments, lastPage, currentPage } ) => {
                         className='more-btn'
                     >
                         <div className='more-btn-inner-wrapper'>
-                            <div className='more-btn__text'>More comments...</div>
+                            <div className='more-btn__text'>Download more...</div>
                             <IoChevronDownCircleOutline  className='more-btn__icon'/>
                         </div>
                     </button>

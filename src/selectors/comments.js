@@ -5,3 +5,4 @@ export const getCurrentPageSelector = (state) => {
     const pages = getPagesSelector(state)
     return pages[pages.length - 1] 
 };
+

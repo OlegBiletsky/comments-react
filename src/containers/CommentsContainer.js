@@ -11,6 +11,8 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
     useEffect(()=>{getComments(currentPage)}, []);
     return (
         <>
+            
+
             <CommentsList
                 comments={comments} 
             />
@@ -29,7 +31,7 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                 onPageChange={(e)=>{getComments(e.selected+1);
                 }}
             />
-            
+        
         </>
     )
 };
