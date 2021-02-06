@@ -1,22 +1,60 @@
 import React from 'react';
 import '../../styles/Comments.scss';
+import {FaUserCircle} from 'react-icons/fa'
+import {BiCalendar, BiTime} from 'react-icons/bi';
 
 function CommentsList ({ comments=[] }) {
     return (
         <>
-            <h1 className="title">
-                Title for comments
-            </h1>
+            
             {comments.map((item) => {
                 return (
-                    <li key={item.id}>
-                        <b>{item.name}</b> : {item.text}
-                    </li>
+                    <div className='comment-wrapper'>
+                        <div className='comment'>
+
+                            <div className='comment-user'>
+                                <div className='comment-user__photo'>
+                                    <FaUserCircle className='comment-user__icon'/>
+                                </div>
+                                <div className='comment-user__name'>
+                                    <p>guest:</p>
+                                    {item.name}
+                                </div>
+                                
+                                    
+                                <div className='comment-user__time'>
+                                    {
+                                        (item.created_at) && 
+                                        <span><BiCalendar/></span>
+                                    }
+                                    {
+                                        (item.created_at) &&
+                                        (item.created_at.split('T')[0]) 
+                                    }
+                                    <span><BiTime/></span>
+                                    {
+                                        (item.created_at) ?
+                                        (item.created_at.split('T')[1].slice(0,5)) :
+                                        <p>recently</p>
+                                    }
+                                </div>
+                                
+                                
+                            </div>
+
+                            <div className='comment-text'>
+                                <div className='comment-text__message'>
+                                    {item.text}
+                                </div>
+                            </div>
+
+
+                        </div>
+                    
+                    </div>
+                    
                 )
             })}
-
-
-
 
 
         </>
