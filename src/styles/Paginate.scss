@@ -45,6 +45,7 @@
 }
 .activeLinkClassName{
     background-color: #4ba5da;
+    cursor: auto;
 }
 .previousLinkClassName{
     padding: 10px 20px 10px 20px;
@@ -72,9 +73,10 @@
         padding: 10px 6px 10px 6px;
     }
 }
-.disabledClassName{
+.disabledClassName a{
     background-color: #8b8b8b;
-    cursor: none;
+    cursor: auto;
+    opacity: 0.3;
 }
 .breakLinkClassName{
     cursor: pointer;
