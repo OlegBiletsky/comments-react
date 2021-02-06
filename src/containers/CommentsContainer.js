@@ -13,10 +13,11 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
             <CommentsList
                 comments={comments} 
             />
+
             {
                 (lastPage !== currentPage) && <button onClick={()=>{getMoreComments(currentPage+1)}}>MORE</button>
-
             }
+
             <ReactPaginate 
                 pageCount = {lastPage}
                 pageRangeDisplayed = {lastPage}
@@ -25,6 +26,7 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                 onPageChange={(e)=>{getComments(e.selected+1);
                 }}
             />
+            
         </>
     )
 };

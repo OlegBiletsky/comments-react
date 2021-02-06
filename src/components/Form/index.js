@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/Form.scss';
-import {BsBrightnessHighFill} from 'react-icons/bs';
-import {BiCommentAdd} from 'react-icons/bi';
+import {BsBrightnessHighFill, BsPlusCircleFill } from 'react-icons/bs';
+
 function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, }) {
     return (
         <>
@@ -51,7 +51,7 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                 > 
                     <div className='form-submit-btn__text-wrapper'>
                         <div className='form-submit-btn__text'>Comment</div>
-                        <BiCommentAdd className='form-submit-btn__icon'/>
+                        <BsPlusCircleFill  className='form-submit-btn__icon'/>
                     </div>
                 </button> 
 
