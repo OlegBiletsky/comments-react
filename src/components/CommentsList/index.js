@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/Comments.scss';
+import '../../styles/CommentsList.scss';
 import {FaUserCircle} from 'react-icons/fa'
 import {BiCalendar, BiTime} from 'react-icons/bi';
 

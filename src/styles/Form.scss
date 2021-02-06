@@ -129,6 +129,9 @@
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
     }
+    &:hover{
+        border: 1px solid #1585ca;
+    }
 }
 
 .form-submit-btn__text {

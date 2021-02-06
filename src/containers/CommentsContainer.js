@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import { getPageComments, getMoreComments } from '../actions/comments';
-import CommentsList from '../components/Comments';
-import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector} from '../selectors/comments'
+import CommentsList from '../components/CommentsList';
+import MoreComments from '../components/MoreComments';
+import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector} from '../selectors/comments';
 import ReactPaginate from 'react-paginate';
 
 const CommentsContainer = ( { comments, getComments, getMoreComments, pages, lastPage, currentPage } ) => {
@@ -14,9 +15,11 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                 comments={comments} 
             />
 
-            {
-                (lastPage !== currentPage) && <button onClick={()=>{getMoreComments(currentPage+1)}}>MORE</button>
-            }
+            <MoreComments
+                lastPage={lastPage}
+                currentPage={currentPage}
+                getMoreComments={getMoreComments}
+            />
 
             <ReactPaginate 
                 pageCount = {lastPage}

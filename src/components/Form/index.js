@@ -40,7 +40,6 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                         name='form-text__field'
                         type='text'
                         autoComplete='off'
-                        resize='none'
                     />  
                 </div>
 
