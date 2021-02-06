@@ -5,6 +5,7 @@ import CommentsList from '../components/CommentsList';
 import MoreComments from '../components/MoreComments';
 import {getCommentsSelector, getPagesSelector, getLastPageSelector, getCurrentPageSelector} from '../selectors/comments';
 import ReactPaginate from 'react-paginate';
+import '../styles/Paginate.scss';
 
 const CommentsContainer = ( { comments, getComments, getMoreComments, pages, lastPage, currentPage } ) => {
     
@@ -22,15 +23,30 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                 currentPage={currentPage}
                 getMoreComments={getMoreComments}
             />
+            <div className='pagination-wrapper'>
+                <ReactPaginate 
+                    containerClassName={'pagination-container'}
+                    pageLinkClassName={'pageLinkClassName'}
+                    pageClassName={'pageClassName'}
+                    activeLinkClassName={'activeLinkClassName'}
+                    activeClassName={'activeClassName'}
+                    previousClassName={'previousClassName'}
+                    nextClassName={'nextClassName'}
+                    previousLinkClassName={'previousLinkClassName'}
+                    nextLinkClassName={'nextLinkClassName'}
+                    disabledClassName={'disabledClassName'}
+                    breakLinkClassName={'breakLinkClassName'}
+                    pageCount = {lastPage}//загальна к-сть сторінок
+                    pageRangeDisplayed = {3}//для відображення
+                    marginPagesDisplayed ={1}//на полях
+                    previousLabel={'< Previous'}
+                    nextLabel={'Next >'}
+                    onPageChange={(e)=>{ getComments(e.selected+1); }}
+                    initialPage = {currentPage-1}
 
-            <ReactPaginate 
-                pageCount = {lastPage}
-                pageRangeDisplayed = {lastPage}
-                marginPagesDisplayed ={lastPage}
-                initialPage = {currentPage}
-                onPageChange={(e)=>{getComments(e.selected+1);
-                }}
-            />
+                />
+            </div>
+            
         
         </>
     )

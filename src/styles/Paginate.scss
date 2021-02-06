@@ -1,0 +1,81 @@
+@import './variables.scss';
+@import './colors.scss';
+.pagination-wrapper{
+    margin: auto;
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.pagination-container{
+    width: $startWidth;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    @media screen and (max-width: $breakpoint1) {
+        width: $widthForBreakpoint1;
+    }
+    @media screen and (max-width: $breakpoint2) {
+        width: $widthForBreakpoint2;
+    }
+    @media screen and (max-width: $breakpoint3) {
+        width: $widthForBreakpoint3;
+    }
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+        margin: 20px 0;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+    }
+}
+.pageLinkClassName{
+    padding: 10px 20px 10px 20px;
+    background-color: #d5ebf8;
+    cursor: pointer;
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+        padding: 10px 10px 10px 10px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+        padding: 10px 6px 10px 6px;
+    }
+}
+.activeLinkClassName{
+    background-color: #4ba5da;
+}
+.previousLinkClassName{
+    padding: 10px 20px 10px 20px;
+    background-color: #88a2bb;
+    cursor: pointer;
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+        padding: 10px 10px 10px 10px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+        padding: 10px 6px 10px 6px;
+    }
+}
+.nextLinkClassName{
+    padding: 10px 20px 10px 20px;   
+    background-color: #88a2bb;
+    cursor: pointer;
+    @media screen and (max-width: $breakpoint4) {
+        width: $widthForBreakpoint4;
+        padding: 10px 10px 10px 10px;
+    }
+    @media screen and (max-width: $breakpoint5) {
+        width: $widthForBreakpoint5;
+        padding: 10px 6px 10px 6px;
+    }
+}
+.disabledClassName{
+    background-color: #8b8b8b;
+    cursor: none;
+}
+.breakLinkClassName{
+    cursor: pointer;
+}
