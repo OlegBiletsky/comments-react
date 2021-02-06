@@ -36,13 +36,14 @@ const CommentsContainer = ( { comments, getComments, getMoreComments, pages, las
                     nextLinkClassName={'nextLinkClassName'}
                     disabledClassName={'disabledClassName'}
                     breakLinkClassName={'breakLinkClassName'}
-                    pageCount = {lastPage}//загальна к-сть сторінок
-                    pageRangeDisplayed = {3}//для відображення
-                    marginPagesDisplayed ={1}//на полях
+                    pageCount = {lastPage}
+                    pageRangeDisplayed = {3}
+                    marginPagesDisplayed ={1}
                     previousLabel={'< Previous'}
                     nextLabel={'Next >'}
                     onPageChange={(e)=>{ getComments(e.selected+1); }}
                     initialPage = {currentPage-1}
+                    forcePage={separateCurrentPage-1}
                 />
             </div>
             

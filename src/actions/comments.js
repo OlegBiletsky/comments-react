@@ -2,8 +2,13 @@ import {
     GET_MORE_COMMENTS_REQUEST,
     GET_MORE_COMMENTS_SUCCESS,
     GET_COMMENTS_FAIL,
+    
     GET_PAGE_COMMENTS_REQUEST,
     GET_PAGE_COMMENTS_SUCCESS,
+
+    ADD_COMMENT_REQUEST,
+    ADD_COMMENT_SUCCESS,
+    ADD_COMMENT_FAIL,
 } from '../constants/actionTypes';
 
 import { getCommentsFetch } from '../api/api';

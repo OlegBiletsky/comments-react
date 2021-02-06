@@ -1,7 +1,6 @@
 import {
     CHANGE_INPUT_NAME, 
     CHANGE_INPUT_TEXT,
-    ADD_COMMENT_BTN_CLICK
 } from '../constants/actionTypes';
 
 const initialState = {
@@ -20,12 +19,20 @@ const formReducer = (state = initialState, action) => {
         case CHANGE_INPUT_NAME:
             return {
                 ...state,
-                inputNameValue: action.payload,
+                value:{
+                    ...state.value,
+                    inputNameValue: action.payload,   
+                }
+                
             };
         case CHANGE_INPUT_TEXT:
             return {
                 ...state,
-                inputTextValue: action.payload
+                value:{
+                    ...state.value,
+                    inputTextValue: action.payload
+                }
+                
             };
         default:
             return state;
