@@ -23,20 +23,24 @@ function CommentsList ({ comments=[] }) {
                                 
                                     
                                 <div className='comment-user__time'>
-                                    {
-                                        (item.created_at) && 
-                                        <span><BiCalendar/></span>
-                                    }
-                                    {
-                                        (item.created_at) &&
-                                        (item.created_at.split('T')[0]) 
-                                    }
-                                    <span><BiTime/></span>
-                                    {
-                                        (item.created_at) ?
-                                        (item.created_at.split('T')[1].slice(0,5)) :
-                                        <p>recently</p>
-                                    }
+                                    <div className='comment-user__time1'>
+                                        {
+                                            (item.created_at) && 
+                                            <span><BiCalendar/></span>
+                                        }
+                                        {
+                                            (item.created_at) &&
+                                            (item.created_at.split('T')[0]) 
+                                        }
+                                    </div>
+                                    <div className='comment-user__time2'>
+                                        <span><BiTime/></span>
+                                        {
+                                            (item.created_at) ?
+                                            (item.created_at.split('T')[1].slice(0,5)) :
+                                            <p>recently</p>
+                                        }
+                                    </div>
                                 </div>
                                 
                                 
