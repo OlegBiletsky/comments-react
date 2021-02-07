@@ -58,7 +58,7 @@ function Form({
                     onClick={(e) => {
                         return e.preventDefault(), sendComments();
                     }}
-                    disabled={false}
+                    disabled={true}
                 >
                     <div className='form-submit-btn__text-wrapper'>
                         <div className='form-submit-btn__text'>Comment</div>

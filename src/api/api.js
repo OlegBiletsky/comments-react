@@ -3,10 +3,12 @@ export const getCommentsFetch = (page) =>
 
 export const sendCommentFetch = (values) =>
     fetch(`https://jordan.ashton.fashion/api/goods/30/comments`, {
+        // mode: "no-cors",
+
         method: "POST",
-        mode: "no-cors",
         headers: {
             "Content-Type": "application/json; charset=utf-8",
+            "Origin": "http://localhost:3000",
         },
         body: JSON.stringify(values),
     });
