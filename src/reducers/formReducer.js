@@ -1,38 +1,29 @@
-import {
-    CHANGE_INPUT_NAME, 
-    CHANGE_INPUT_TEXT,
-} from '../constants/actionTypes';
+import { CHANGE_INPUT_NAME, CHANGE_INPUT_TEXT } from "../constants/actionTypes";
 
 const initialState = {
     value: {
-        inputNameValue: '',
-        inputTextValue: '', 
-    }
-         
-    
-
+        inputNameValue: "",
+        inputTextValue: "",
+    },
 };
-
 
 const formReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_INPUT_NAME:
             return {
                 ...state,
-                value:{
+                value: {
                     ...state.value,
-                    inputNameValue: action.payload,   
-                }
-                
+                    inputNameValue: action.payload,
+                },
             };
         case CHANGE_INPUT_TEXT:
             return {
                 ...state,
-                value:{
+                value: {
                     ...state.value,
-                    inputTextValue: action.payload
-                }
-                
+                    inputTextValue: action.payload,
+                },
             };
         default:
             return state;

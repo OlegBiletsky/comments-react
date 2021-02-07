@@ -1,21 +1,21 @@
-@import './variables.scss';
-@import './colors.scss';
-.more-btn-wrapper{
+@import "./variables.scss";
+@import "./colors.scss";
+.more-btn-wrapper {
     margin: auto;
-    text-align: center;    
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.more-btn{
-    margin: 20px 0 20px 0;
-    width: 800px;
+.more-btn {
+    margin: 20px 0;
+    width: $startWidth;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    border: 1px solid #1ea0f2;
-    background-color: #1ea0f2;
+    border: 1px solid $more-color-1;
+    background-color: $more-color-1;
     @media screen and (max-width: $breakpoint1) {
         width: $widthForBreakpoint1;
     }
@@ -31,23 +31,23 @@
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
     }
-    &:hover{
-        border: 1px solid #1585ca;
+    &:hover {
+        border: 1px solid $more-color-2;
     }
 }
-.more-btn-inner-wrapper{
+.more-btn-inner-wrapper {
     display: flex;
     justify-self: center;
     align-items: center;
 }
 .more-btn__text {
-    color: #ffffff;
+    color: $more-color-3;
     font-size: 20px;
     text-align: left;
-    background-color: #1ea0f2;
+    background-color: $more-color-1;
     padding: 8px 10px;
 }
 .more-btn__icon {
-    color: #ffffff;
+    color: $more-color-3;
     font-size: 26px;
 }
