@@ -9,6 +9,9 @@ function Form({
     handleChangeTextInput,
     sendComments,
 }) {
+    const name = (inputNameValue || '').trimStart().trimEnd();
+    const text = (inputTextValue || '').trimStart().trimEnd();
+
     return (
         <>
             <h1 className='title'>
@@ -55,11 +58,11 @@ function Form({
                 <button
                     className='form-submit-btn'
                     onClick={async (e) => {
-                        await sendComments({ name: inputNameValue, text: inputTextValue });
+                        await sendComments({ name, text });
                         handleChangeNameInput('');
                         handleChangeTextInput('');
                     }}
-                    disabled={!(inputNameValue && inputTextValue)}
+                    disabled={!(name && text)}
                 >
                     <div className='form-submit-btn__text-wrapper'>
                         <div className='form-submit-btn__text'>Comment</div>
