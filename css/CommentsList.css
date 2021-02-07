@@ -1,0 +1,175 @@
+.comment-wrapper {
+  width: 800px;
+  margin: auto;
+  min-height: 120px; }
+  @media screen and (max-width: 860px) {
+    .comment-wrapper {
+      width: 700px; } }
+  @media screen and (max-width: 760px) {
+    .comment-wrapper {
+      width: 600px; } }
+  @media screen and (max-width: 660px) {
+    .comment-wrapper {
+      width: 500px; } }
+  @media screen and (max-width: 560px) {
+    .comment-wrapper {
+      width: 400px; } }
+  @media screen and (max-width: 460px) {
+    .comment-wrapper {
+      width: 300px; } }
+
+.comment {
+  min-height: 120px;
+  margin: 10px 0 8px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background-color: #d5ebf8; }
+
+.comment-user {
+  width: 25%;
+  min-height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #74c4f7;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px; }
+  @media screen and (max-width: 560px) {
+    .comment-user {
+      width: 40%; } }
+
+.comment-user__photo {
+  margin: 10px 10px; }
+  @media screen and (max-width: 560px) {
+    .comment-user__photo {
+      margin: 5px 5px; } }
+
+.comment-user__icon {
+  font-size: 46px;
+  color: #fff;
+  margin: 2px; }
+  @media screen and (max-width: 560px) {
+    .comment-user__icon {
+      font-size: 30px; } }
+
+.comment-user__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+  color: #000000;
+  font-size: 22px; }
+  .comment-user__name p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-style: italic;
+    color: #fff; }
+  @media screen and (max-width: 660px) {
+    .comment-user__name {
+      font-size: 18px; } }
+  @media screen and (max-width: 560px) {
+    .comment-user__name {
+      font-size: 16px;
+      margin-bottom: 8px; } }
+  @media screen and (max-width: 460px) {
+    .comment-user__name {
+      font-size: 14px; } }
+
+.comment-user__time {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .comment-user__time span {
+    margin: 5px 3px 5px 8px;
+    font-size: 16px; }
+  @media screen and (max-width: 760px) {
+    .comment-user__time {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media screen and (max-width: 560px) {
+    .comment-user__time {
+      font-size: 12px;
+      margin-bottom: 3px; }
+      .comment-user__time span {
+        margin: 3px 3px 3px 5px;
+        font-size: 16px; } }
+
+.comment-user__time1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.comment-user__time2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.comment-text {
+  background-color: #d5ebf8;
+  width: 75%;
+  height: 120px;
+  padding: 10px 30px;
+  text-align: left; }
+  @media screen and (max-width: 560px) {
+    .comment-text {
+      padding: 5px 10px; } }
+  @media screen and (max-width: 460px) {
+    .comment-text {
+      padding: 2px 10px; } }
+
+.comment-text__message {
+  min-height: 100%;
+  font-size: 22px; }
+  @media screen and (max-width: 660px) {
+    .comment-text__message {
+      font-size: 18px; } }
+  @media screen and (max-width: 560px) {
+    .comment-text__message {
+      font-size: 16px; } }
+  @media screen and (max-width: 460px) {
+    .comment-text__message {
+      font-size: 14px; } }
+/*# sourceMappingURL=CommentsList.css.map */
