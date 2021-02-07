@@ -17,13 +17,13 @@ const FormContainer = ({
         inputTextValue={inputTextValue}
         handleChangeNameInput={changeInputName}
         handleChangeTextInput={changeInputText}
-        sendComments={() => sendComments(inputNameValue, inputTextValue)}
+        sendComments={sendComments}
     />
 );
 
 const mapStateToProps = (state) => ({
-    inputNameValue: state.form.inputNameValue,
-    inputTextValue: state.form.inputTextValue,
+    inputNameValue: state.form.value.inputNameValue,
+    inputTextValue: state.form.value.inputTextValue,
 });
 
 const mapDispatchToProps = (dispatch) => {

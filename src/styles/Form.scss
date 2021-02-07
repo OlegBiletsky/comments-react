@@ -105,6 +105,11 @@
 
 .form-submit-btn {
     margin: 8px 0 30px 0;
+    background-color: $form-color-2;
+}
+.form-submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 .form-submit-btn__text-wrapper {
     width: $startWidth;
@@ -113,7 +118,6 @@
     align-items: center;
     border-radius: 4px;
     border: 1px solid $form-color-2;
-    background-color: $form-color-2;
     @media screen and (max-width: $breakpoint1) {
         width: $widthForBreakpoint1;
     }
@@ -138,7 +142,6 @@
     color: $form-color-3;
     font-size: 20px;
     text-align: left;
-    background-color: $form-color-2;
     padding: 8px 10px;
 }
 .form-submit-btn__icon {

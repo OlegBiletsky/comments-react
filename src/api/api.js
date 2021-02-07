@@ -1,14 +1,16 @@
-export const getCommentsFetch = (page) =>
-    fetch(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`);
+const BASE = '/api/goods/30/comments';
 
-export const sendCommentFetch = (values) =>
-    fetch(`https://jordan.ashton.fashion/api/goods/30/comments`, {
-        // mode: "no-cors",
 
+export const getCommentsFetch = (page) => {
+    return fetch(`${BASE}?page=${page}`);
+}
+
+export const sendCommentFetch = (values) => {
+    return fetch(BASE, {
         method: "POST",
         headers: {
             "Content-Type": "application/json; charset=utf-8",
-            "Origin": "http://localhost:3000",
         },
         body: JSON.stringify(values),
     });
+}

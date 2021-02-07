@@ -90,21 +90,18 @@ const commentsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 comments: {
+                    ...state.comments,
                     isLoading: false,
                     error: false,
-                    database: [action.payload.data, ...state.comments.database],
                 },
-                separateCurrentPage: action.payload.current_page,
-                pages: [...state.pages, action.payload.current_page],
-                lastPage: action.payload.last_page,
             };
         case ADD_COMMENT_FAIL:
             return {
                 ...state,
                 comments: {
+                    ...state.comments,
                     isLoading: false,
                     error: action.payload,
-                    database: false,
                 },
             };
         default:

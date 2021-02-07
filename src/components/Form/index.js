@@ -54,11 +54,12 @@ function Form({
 
                 <button
                     className='form-submit-btn'
-                    type='submit'
-                    onClick={(e) => {
-                        return e.preventDefault(), sendComments();
+                    onClick={async (e) => {
+                        await sendComments({ name: inputNameValue, text: inputTextValue });
+                        handleChangeNameInput('');
+                        handleChangeTextInput('');
                     }}
-                    disabled={true}
+                    disabled={!(inputNameValue && inputTextValue)}
                 >
                     <div className='form-submit-btn__text-wrapper'>
                         <div className='form-submit-btn__text'>Comment</div>
