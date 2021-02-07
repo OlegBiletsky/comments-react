@@ -1,8 +1,8 @@
-@import './colors.scss';
+@import "./colors.scss";
 .App {
-  text-align: center;
-  background-color: #f5f8fa;
-  min-height: 100vh;
-  font-family: 'Ubuntu', sans-serif;
-  padding: 20px 10px 20px 10px;
+    text-align: center;
+    background-color: $App-background-color;
+    min-height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+    padding: 20px 10px 20px 10px;
 }

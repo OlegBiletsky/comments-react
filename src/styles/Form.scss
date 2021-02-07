@@ -1,7 +1,7 @@
-@import './variables.scss';
-@import './colors.scss';
+@import "./variables.scss";
+@import "./colors.scss";
 .title {
-    color: #1ea0f2;
+    color: $form-color-2;
     margin: auto;
     text-align: center;
     display: flex;
@@ -11,10 +11,10 @@
 .title__first {
     font-size: 35px;
     font-weight: 900;
-    margin: 20px 10px 20px 10px;
+    margin: 20px 10px;
     @media screen and (max-width: $breakpoint4) {
         font-size: 30px;
-        margin: 15px 10px 15px 10px;
+        margin: 15px 10px;
     }
     @media screen and (max-width: $breakpoint5) {
         font-size: 22px;
@@ -42,34 +42,33 @@
         }
     }
 }
-
 .form-name {
     margin: 20px 0 10px 0;
 }
 .form-name__field {
-    width: 800px;
-    color: #657786;
+    width: $startWidth;
+    color: $form-color-1;
     font-size: 20px;
     text-align: left;
     border-radius: 4px;
-    border: 1px solid #1ea0f2;
-    background-color: #ffffff;
+    border: 1px solid $form-color-2;
+    background-color: $form-color-3;
     padding: 8px 15px;
     @media screen and (max-width: $breakpoint1) {
-        width: 700px;
+        width: $widthForBreakpoint1;
     }
     @media screen and (max-width: $breakpoint2) {
-        width: 600px;
+        width: $widthForBreakpoint2;
     }
     @media screen and (max-width: $breakpoint3) {
-        width: 500px;
+        width: $widthForBreakpoint3;
     }
     @media screen and (max-width: $breakpoint4) {
-        width: 400px;
+        width: $widthForBreakpoint4;
         font-size: 16px;
     }
     @media screen and (max-width: $breakpoint5) {
-        width: 300px;
+        width: $widthForBreakpoint5;
     }
 }
 
@@ -78,29 +77,29 @@
 }
 .form-text__field {
     resize: none;
-    width: 800px;
-    color: #657786;
+    width: $startWidth;
+    color: $form-color-1;
     font-size: 20px;
     text-align: left;
     border-radius: 4px;
-    border: 1px solid #1ea0f2;
-    background-color: #ffffff;
+    border: 1px solid $form-color-2;
+    background-color: $form-color-3;
     padding: 8px 15px;
     @media screen and (max-width: $breakpoint1) {
-        width: 700px;
+        width: $widthForBreakpoint1;
     }
     @media screen and (max-width: $breakpoint2) {
-        width: 600px;
+        width: $widthForBreakpoint2;
     }
     @media screen and (max-width: $breakpoint3) {
-        width: 500px;
+        width: $widthForBreakpoint3;
     }
     @media screen and (max-width: $breakpoint4) {
-        width: 400px;
+        width: $widthForBreakpoint4;
         font-size: 16px;
     }
     @media screen and (max-width: $breakpoint5) {
-        width: 300px;
+        width: $widthForBreakpoint5;
     }
 }
 
@@ -108,13 +107,13 @@
     margin: 8px 0 30px 0;
 }
 .form-submit-btn__text-wrapper {
-    width: 800px;
+    width: $startWidth;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
-    border: 1px solid #1ea0f2;
-    background-color: #1ea0f2;
+    border: 1px solid $form-color-2;
+    background-color: $form-color-2;
     @media screen and (max-width: $breakpoint1) {
         width: $widthForBreakpoint1;
     }
@@ -130,19 +129,19 @@
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
     }
-    &:hover{
-        border: 1px solid #1585ca;
+    &:hover {
+        border: 1px solid $form-color-4;
     }
 }
 
 .form-submit-btn__text {
-    color: #ffffff;
+    color: $form-color-3;
     font-size: 20px;
     text-align: left;
-    background-color: #1ea0f2;
+    background-color: $form-color-2;
     padding: 8px 10px;
 }
 .form-submit-btn__icon {
-    color: #ffffff;
+    color: $form-color-3;
     font-size: 22px;
 }

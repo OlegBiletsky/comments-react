@@ -1,10 +1,8 @@
-import { combineReducers } from 'redux';
-import commentsReducer from './commentsReducer';
-import formReducer from './formReducer';
-
+import { combineReducers } from "redux";
+import commentsReducer from "./commentsReducer";
+import formReducer from "./formReducer";
 
 export default combineReducers({
-    comments:commentsReducer,
+    comments: commentsReducer,
     form: formReducer,
-
-})
+});

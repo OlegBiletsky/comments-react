@@ -1,14 +1,14 @@
-@import './variables.scss';
-@import './colors.scss';
-.pagination-wrapper{
+@import "./variables.scss";
+@import "./colors.scss";
+.pagination-wrapper {
     margin: auto;
-    text-align: center;    
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
 }
-.pagination-container{
+.pagination-container {
     width: $startWidth;
     display: flex;
     justify-content: space-between;
@@ -30,57 +30,57 @@
         width: $widthForBreakpoint5;
     }
 }
-.pageLinkClassName{
-    padding: 10px 20px 10px 20px;
-    background-color: #d5ebf8;
+.pageLinkClassName {
+    padding: 10px 20px;
+    background-color: $pagination-color-1;
     border-radius: 4px;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
         width: $widthForBreakpoint4;
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
     }
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
-        padding: 10px 6px 10px 6px;
+        padding: 10px 6px;
     }
 }
-.activeLinkClassName{
-    background-color: #4ba5da;
+.activeLinkClassName {
+    background-color: $pagination-color-2;
     cursor: auto;
 }
-.previousLinkClassName{
-    padding: 10px 20px 10px 20px;
+.previousLinkClassName {
+    padding: 10px 20px;
     border-radius: 4px;
-    background-color: #88a2bb;
+    background-color: $pagination-color-3;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
         width: $widthForBreakpoint4;
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
     }
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
-        padding: 10px 6px 10px 6px;
+        padding: 10px 6px;
     }
 }
-.nextLinkClassName{
-    padding: 10px 20px 10px 20px; 
+.nextLinkClassName {
+    padding: 10px 20px;
     border-radius: 4px;
-    background-color: #88a2bb;
+    background-color: $pagination-color-3;
     cursor: pointer;
     @media screen and (max-width: $breakpoint4) {
         width: $widthForBreakpoint4;
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
     }
     @media screen and (max-width: $breakpoint5) {
         width: $widthForBreakpoint5;
-        padding: 10px 6px 10px 6px;
+        padding: 10px 6px;
     }
 }
-.disabledClassName a{
-    background-color: #8b8b8b;
+.disabledClassName a {
+    background-color: $pagination-color-4;
     cursor: auto;
     opacity: 0.3;
 }
-.breakLinkClassName{
+.breakLinkClassName {
     cursor: pointer;
 }
