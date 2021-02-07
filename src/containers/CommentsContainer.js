@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getPageComments, getMoreComments } from "../actions/comments";
 import CommentsList from "../components/CommentsList";
@@ -9,30 +9,33 @@ import {
     getLastPageSelector,
     getCurrentPageSelector,
     getSeparateCurrentPageSelector,
-    loadingComments,
 } from "../selectors/comments";
 import ReactPaginate from "react-paginate";
 import "../styles/Paginate.scss";
 
 const CommentsContainer = ({
-    loadingComments,
     comments,
     getComments,
     getMoreComments,
-    pages,
     lastPage,
     currentPage,
     separateCurrentPage,
 }) => {
-    console.log(loadingComments, "---loadingComments");
+
+    const [initial, setInitial] = useState(true);
     useEffect(() => {
-        getComments(currentPage);
-    }, []);
+        async function fetchData() {
+            await getComments(1);
+            setInitial(false);
+        }
+        fetchData();
+    }, [])
+
+
     return (
         <>
             {
-                // (loadingComments == true) ? null :
-                <div>
+                !initial && <div>
                     <CommentsList comments={comments} />
 
                     <MoreComments
@@ -55,7 +58,7 @@ const CommentsContainer = ({
                             previousLabel={"< Previous"}
                             nextLabel={"Next >"}
                             onPageChange={(e) => {
-                                getComments(e.selected + 1);
+                                !initial && getComments(e.selected + 1);
                             }}
                             initialPage={currentPage - 1}
                             forcePage={separateCurrentPage - 1}
@@ -69,11 +72,9 @@ const CommentsContainer = ({
 
 const mapStateToProps = (state) => ({
     comments: getCommentsSelector(state),
-    pages: getPagesSelector(state),
     lastPage: getLastPageSelector(state),
     currentPage: getCurrentPageSelector(state),
     separateCurrentPage: getSeparateCurrentPageSelector(state),
-    loadingComments: loadingComments(state),
 });
 
 const mapDispatchToProps = (dispatch) => {

@@ -6,7 +6,7 @@ import { BiCalendar, BiTime } from "react-icons/bi";
 function CommentsList({ comments = [] }) {
     return (
         <>
-            {comments &&
+            {!!comments?.length &&
                 comments.map((item) => {
                     return (
                         <div className='comment-wrapper'>

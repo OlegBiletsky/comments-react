@@ -8,4 +8,3 @@ export const getCurrentPageSelector = (state) => {
 export const getSeparateCurrentPageSelector = (state) =>
     state.comments.separateCurrentPage;
 export const sendComments = (state) => state.form.value;
-export const loadingComments = (state) => state.comments.comments.isLoading;
