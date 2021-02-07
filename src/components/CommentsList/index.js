@@ -7,7 +7,7 @@ function CommentsList ({ comments=[] }) {
     return (
         <>
             
-            {comments.map((item) => {
+            { (comments) && comments.map((item) => {
                 return (
                     <div className='comment-wrapper'>
                         <div className='comment'>

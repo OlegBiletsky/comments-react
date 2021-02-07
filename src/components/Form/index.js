@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/Form.scss';
 import {BsBrightnessHighFill, BsPlusCircleFill } from 'react-icons/bs';
 
-function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, handleSubmitForm}) {
+function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChangeTextInput, sendComments}) {
     return (
         <>
             <h1 className="title">
@@ -32,7 +32,7 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                 <div className="form-text">
                     <textarea
                         value={inputTextValue}
-                        onChange={ (e)=>handleChangeTextInput(e.target.value)}
+                        onChange={ (e) => handleChangeTextInput(e.target.value)}
                         placeholder="Add a comment"
                         onFocus={ (e) => e.target.placeholder = "" }
                         onBlur={ (e) => e.target.placeholder = "Add a comment" }
@@ -46,7 +46,7 @@ function Form ({ inputNameValue,inputTextValue,handleChangeNameInput,handleChang
                 <button 
                     className='form-submit-btn' 
                     type='submit' 
-                    onClick={ (e)=>{return (e.preventDefault(), handleSubmitForm(e)    ) }} 
+                    onClick={ (e)=>{return (e.preventDefault(), sendComments() )}   } 
                     disabled={false }
                 > 
                     <div className='form-submit-btn__text-wrapper'>

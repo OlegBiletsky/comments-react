@@ -36,6 +36,7 @@ export const getPageComments = (dispatch) => async (page) => {
 };
 
 export const sendPageComments = (dispatch) => async (values) => {
+    console.log(values);
     dispatch({ type: ADD_COMMENT_REQUEST });
     try {
       const response = await sendCommentFetch(values);

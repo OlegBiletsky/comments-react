@@ -11,7 +11,7 @@ const FormContainer = ( { inputNameValue, inputTextValue, changeInputName, chang
         inputTextValue={inputTextValue} 
         handleChangeNameInput={changeInputName}
         handleChangeTextInput={changeInputText}
-        handleSubmitForm={sendComments}
+        sendComments={ () => sendComments(inputNameValue, inputTextValue) }
     />
 );
 

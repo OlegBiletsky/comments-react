@@ -92,7 +92,7 @@ const commentsReducer = (state = initialState, action) => {
                 comments: {
                     isLoading: false,
                     error: false,
-                    database: [...action.payload.data, ...state.comments.database ]
+                    database: [action.payload.data, ...state.comments.database ]
                 },
                 separateCurrentPage: action.payload.current_page,
                 pages: [...state.pages, action.payload.current_page],
